@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e9e9e9;
+}
+
+.wrapper {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.wrapper h1 {
+  color: #006eff;
+  font-size: 2.7rem;
+  margin-bottom: 25px;
+}
+
+.wrapper canvas {
+  border: 2px solid #006eff;
+  border-radius: 5px;
+}
