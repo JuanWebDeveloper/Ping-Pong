@@ -11,6 +11,26 @@ const bar = new Bar(20, 100, 20, 100, board);
 const barTwo = new Bar(760, 100, 20, 100, board);
 const boardView = new BoardView(canvas, board);
 
+// Configuracion de las teclas del canvas
+document.addEventListener('keydown', (e) => {
+  if (e.keyCode === 38) {
+    e.preventDefault();
+    bar.up();
+  } else if (e.keyCode === 40) {
+    e.preventDefault();
+    bar.down();
+  } else if (e.keyCode === 87) {
+    e.preventDefault();
+    barTwo.up();
+  } else if (e.keyCode === 83) {
+    e.preventDefault();
+    barTwo.down();
+  } else if (e.keyCode === 32) {
+    e.preventDefault();
+    board.playing = !board.playing;
+  }
+});
+
 // Primera vista del juego
 boardView.draw();
 
