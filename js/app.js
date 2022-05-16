@@ -13,19 +13,19 @@ const boardView = new BoardView(canvas, board);
 
 // Configuracion de las teclas del canvas
 document.addEventListener('keydown', (e) => {
-  if (e.keyCode === 38) {
+  if (e.key === 'ArrowUp') {
     e.preventDefault();
     bar.up();
-  } else if (e.keyCode === 40) {
+  } else if (e.key === 'ArrowDown') {
     e.preventDefault();
     bar.down();
-  } else if (e.keyCode === 87) {
+  } else if (e.key === 'W' || e.key === 'w') {
     e.preventDefault();
     barTwo.up();
-  } else if (e.keyCode === 83) {
+  } else if (e.key === 'S' || e.key === 's') {
     e.preventDefault();
     barTwo.down();
-  } else if (e.keyCode === 32) {
+  } else if (e.key === ' ') {
     e.preventDefault();
     board.playing = !board.playing;
   }
